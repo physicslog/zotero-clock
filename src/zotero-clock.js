@@ -1,4 +1,4 @@
-ZoteroClockTimer = {
+ZoteroClock = {
     id: null,
     version: null,
     rootURI: null,
