@@ -13,7 +13,7 @@ async function startup({ id, version, rootURI }) {
 	log("Starting 1.0");
 
 	Zotero.PreferencePanes.register({
-		pluginID: 'zotero-clock-timer@example.com',
+		pluginID: 'zotero-clock@example.com',
 		src: rootURI + 'preferences.xhtml',
 		scripts: [rootURI + 'preferences.js']
 	});
