@@ -1,8 +1,8 @@
 // bootstrap.js
-var ZoteroClockTimer;
+var ZoteroClock;
 
 function log(msg) {
-	Zotero.debug("Zotero Clock Timer: " + msg);
+	Zotero.debug("Zotero Clock: " + msg);
 }
 
 function install() {
@@ -19,22 +19,22 @@ async function startup({ id, version, rootURI }) {
 	});
 
 	Services.scriptloader.loadSubScript(rootURI + 'zotero-clock.js');
-	ZoteroClockTimer.init({ id, version, rootURI });
-	ZoteroClockTimer.addToAllWindows();
+	ZoteroClock.init({ id, version, rootURI });
+	ZoteroClock.addToAllWindows();
 }
 
 function onMainWindowLoad({ window }) {
-	ZoteroClockTimer.addToWindow(window);
+	ZoteroClock.addToWindow(window);
 }
 
 function onMainWindowUnload({ window }) {
-	ZoteroClockTimer.removeFromWindow(window);
+	ZoteroClock.removeFromWindow(window);
 }
 
 function shutdown() {
 	log("Shutting down 1.0");
-	ZoteroClockTimer.removeFromAllWindows();
-	ZoteroClockTimer = undefined;
+	ZoteroClock.removeFromAllWindows();
+	ZoteroClock = undefined;
 }
 
 function uninstall() {
