@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "Zotero Clock",
+	"version": "2.0",
+	"description": "Zotero Clock",
+	"homepage_url": "https://github.com/physicslog/zotero-clock",
+	"applications": {
+		"zotero": {
+			"id": "make-it-red@example.com",
+			"update_url": "https://github.com/physicslog/zotero-clock/updates-2.0.json",
+			"strict_min_version": "7.0",
+			"strict_max_version": "7.1.*"
+		}
+	}
+}
