@@ -14,7 +14,7 @@ ZoteroClock = {
     },
 
     log(msg) {
-        Zotero.debug("Zotero Clock Timer: " + msg);
+        Zotero.debug("Zotero Clock: " + msg);
     },
 
     addToWindow(window) {
